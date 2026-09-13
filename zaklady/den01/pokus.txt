@@ -1,0 +1,4 @@
+ahoj
+svete
+ahoj znovu
+konec

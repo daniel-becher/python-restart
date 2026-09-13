@@ -1,0 +1,16 @@
+cd den -> přejde do složky den
+cd .. -> složka zpět
+mkdir -> vytvoří složku
+ni -> vytvoří prázdný file
+ls -> co je ve složce
+pwd -> kde právě jsem
+mv co kam -> přesune soubor "co" do "kam"
+cat "soubor.txt" -> vypíše "soubor.txt"
+select-string "slovo" soubor.txt -> v "soubor.txt" najde řádky se slovem "slovo"
+grep -> vyhledat text v souboru
+
+Set-Content pokus.txt "prvni radek"      # vytvoří / PŘEPÍŠE celý obsah
+Add-Content pokus.txt "druhy radek"      # přidá na konec
+Get-Content pokus.txt                    # vypíše obsah (to je to "cat")
+Set-Content pokus.txt "prvni`ndruhy`ntreti" #vic radku najednou
+
