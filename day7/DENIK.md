@@ -1,0 +1,1 @@
+Clekem jsem se potrápil se slicingem, ale jinak bych řekl, že mi šlo vše. 
