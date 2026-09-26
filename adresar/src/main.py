@@ -33,8 +33,10 @@ if __name__ == "__main__":
         elif args.prikaz == "najdi":
             find(kontakty, args.jmeno)
         elif args.prikaz == "smaz":
-            delete(uloziste, kontakty, args.jmeno)
-            print(f"Kontakt {args.jmeno} smazán.")
+            if delete(uloziste, kontakty, args.jmeno):
+                print(f"Kontakt {args.jmeno} smazán.")
+            else:
+                print("Kontakt nenalezen.")
         elif args.prikaz == "seznam":
             show(kontakty)
     except NeplatnyKontakt as e:
