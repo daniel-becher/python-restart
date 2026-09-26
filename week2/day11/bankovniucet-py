@@ -1,0 +1,26 @@
+class NedostatekProstredku(ValueError):
+    pass
+
+class BankvniUcet:
+    def __init__(self, zustatek):
+        self.zustatek = zustatek
+        self.historie = []
+
+    def vklad(self, vklad):
+        if vklad <= 0:
+            raise ValueError(f"Nemuzes vlozit zapornou castku!")
+        self.historie.append({"typ": "vklad", "castka": vklad})
+        self.zustatek = self.zustatek + vklad
+        return self.zustatek
+
+    def vyber(self, vyber):
+        if vyber <= 0:
+            raise ValueError(f"Nemuzes vybrat zapornou castku!")
+        if self.zustatek - vyber < 0:
+            raise NedostatekProstredku(
+                f"Zustatek je {self.zustatek}. Nelze vybrat více!"
+            )
+
+        self.historie.append({"typ": "vyber", "castka": vyber})
+        self.zustatek = self.zustatek - vyber
+        return self.zustatek
