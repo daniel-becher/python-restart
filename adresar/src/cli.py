@@ -29,10 +29,9 @@ def find(kontakty, jmeno):
 
 def delete(uloziste, kontakty, jmeno):
     pocet_pred = len(kontakty)
-    for name in kontakty[:]:
-        if name["jmeno"] == jmeno:
-            kontakty.remove(name)
-    if len(kontakty) == pocet_pred:
-        print("Kontakt nenalezen.")
+    for kontakt in kontakty[:]:
+        if kontakt["jmeno"] == jmeno:
+            kontakty.remove(kontakt)
     uloziste.uloz(kontakty)
+    return len(kontakty) < pocet_pred
 
